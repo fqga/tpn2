@@ -44,7 +44,7 @@
  ** |----|------------|-------------|-----------------------------------------|
  ** |  1 | 2022.08.27 | fquiroga    | Version inicial del archivo             |
  ** 
- ** @defgroup plantilla Plantilals de Archivos
+ ** @defgroup plantilla Plantillas de Archivos
  ** @brief Plantillas de archivos normalizadas
  ** @{ 
  */
@@ -63,6 +63,12 @@ extern "C" {
 /* === Declaraciones de variables publicas ================================= */
 
 /* === Declaraciones de funciones publicas ================================= */
+
+/**
+ * @brief Funcion principal del TPN2
+ * 
+ * @return int 
+ */
 
 int main(void);
 

@@ -2,7 +2,7 @@
  * Facultad de Ciencias Exactas y Tecnología 
  * Universidad Nacional de Tucuman
  * http://www.microprocesadores.unt.edu.ar/
- * Copyright 2022, Esteban Volentini <evolentini@herrera.unt.edu.ar>
+ * Copyright 2022, Facundo Quiroga <facundoqga@gmail.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -44,7 +44,7 @@
  ** |----|------------|-------------|-----------------------------------------|
  ** |  1 | 2022.08.27 | fquiroga    | Version inicial del archivo             |
  ** 
- ** @defgroup plantilla Plantilals de Archivos
+ ** @defgroup plantilla Plantillas de Archivos
  ** @brief Plantillas de archivos normalizadas
  ** @{ 
  */
@@ -72,6 +72,15 @@ struct alumno_s
 /* === Declaraciones de variables publicas ================================= */
 
 /* === Declaraciones de funciones publicas ================================= */
+
+/**
+ * @brief Funcion para mostrar el nombre del alumno
+ * 
+ * Esta funcion muestra el nombre del alumno por pantalla. Debe recibir un
+ * puntero a una estructura con los datos del alumno que se quiere mostrar.
+ * 
+ * @param alumno Puntero a la estructura con los datos del alumno
+ */
 void nombre(const struct alumno_s * alumno);
 
 /* === Ciere de documentacion ============================================== */

@@ -41,7 +41,7 @@
  ** |----|------------|-------------|-----------------------------------------|
  ** |  1 | 2022.08.27 | fquiroga    | Version inicial del archivo             |
  ** 
- ** @defgroup plantilla Plantilals de Archivos
+ ** @defgroup plantilla Plantillas de Archivos
  ** @brief Plantillas de archivos normalizadas
  ** @{ 
  */
@@ -74,7 +74,7 @@ int main(void) {
 	};
 
 	nombre(&facundo);
-	
+
 	return 0;
 }
 

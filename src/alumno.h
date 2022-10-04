@@ -2,7 +2,7 @@
  * Facultad de Ciencias Exactas y Tecnología 
  * Universidad Nacional de Tucuman
  * http://www.microprocesadores.unt.edu.ar/
- * Copyright 2022, Facundo Quiroga <facundoqga@gmail.com>
+ * Copyright 2022, Esteban Volentini <evolentini@herrera.unt.edu.ar>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -32,9 +32,12 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/** @file main.c
+#ifndef ALUMNO_H   /*! @cond    */
+#define ALUMNO_H   /*! @endcond */
+
+/** @file alumno.h
  **
- ** @brief Programa principal del TP2
+ ** @brief Cabecera del modulo con las funciones de alumno
  **
  ** 
  ** | RV | YYYY.MM.DD | Autor       | Descripción de los cambios              |
@@ -46,39 +49,36 @@
  ** @{ 
  */
 
-/* === Inclusiones de cabeceras ============================================ */
-#include "main.h"
-#include "alumno.h"
-#include <stdio.h>
+/* === Inclusiones de archivos externos ==================================== */
 
-/* === Definicion y Macros privados ======================================== */
+/* === Cabecera C++ ======================================================== */
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-/* === Declaraciones de tipos de datos privados ============================ */
+/* === Definicion y Macros publicos ======================================== */
 
-/* === Definiciones de variables privadas ================================== */
+/* == Declaraciones de tipos de datos publicos ============================= */
 
-/* === Definiciones de variables publicas ================================== */
+//! Estructura que contiene los datos del alumno
+struct alumno_s
+{   
+    char apellido[64];  //!< Cadena de caracteres con el apellido del alumno
+    char nombre[64];    //!< Cadena de caracteres con el nombre del alumno
+    char documento[16]; //!< Cadena de caracteres con el DNI del alumno
 
-/* === Declaraciones de funciones privadas ================================= */
+};
 
-/* === Definiciones de funciones privadas ================================== */
+/* === Declaraciones de variables publicas ================================= */
 
-/* === Definiciones de funciones publicas ================================== */
-
-int main(void) {
-	static const struct alumno_s facundo =
-	{
-		.apellido = "QUIROGA",
-		.nombre = "Facundo",
-		.documento = "38.118.179"
-	};
-
-	nombre(&facundo);
-	
-	return 0;
-}
+/* === Declaraciones de funciones publicas ================================= */
+void nombre(const struct alumno_s * alumno);
 
 /* === Ciere de documentacion ============================================== */
+#ifdef __cplusplus
+}
+#endif
 
 /** @} Final de la definición del modulo para doxygen */
 
+#endif   /* ALUMNO_H */

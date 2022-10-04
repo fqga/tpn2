@@ -32,9 +32,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/** @file main.c
+/** @file alumno.c
  **
- ** @brief Programa principal del TP2
+ ** @brief Codigo fuente de las funciones de alumno
  **
  ** 
  ** | RV | YYYY.MM.DD | Autor       | Descripción de los cambios              |
@@ -47,7 +47,6 @@
  */
 
 /* === Inclusiones de cabeceras ============================================ */
-#include "main.h"
 #include "alumno.h"
 #include <stdio.h>
 
@@ -65,20 +64,14 @@
 
 /* === Definiciones de funciones publicas ================================== */
 
-int main(void) {
-	static const struct alumno_s facundo =
-	{
-		.apellido = "QUIROGA",
-		.nombre = "Facundo",
-		.documento = "38.118.179"
-	};
+void nombre(const struct alumno_s * alumno)
+{
+    printf("Apellido del Alumno: %s\r\n", alumno->apellido);
+    printf("Nombre del Alumno: %s\r\n", alumno->nombre);
+    printf("DNI del Alumno: %s\r\n", alumno->documento);
 
-	nombre(&facundo);
-	
-	return 0;
 }
 
 /* === Ciere de documentacion ============================================== */
 
 /** @} Final de la definición del modulo para doxygen */
-
